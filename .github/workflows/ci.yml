@@ -1,14 +1,19 @@
 # .github/workflows/ci.yml
+
+name: Basit CI Denemesi
+
 on:
-  push:
+  push:     # Git'e push olunca çalışacak
     branches:
       - main
-jobs: 
-  say-hello:
-  runs-on: ubuntu-latest
 
-  steps:
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+
+    steps:
     - name: Repo içeriğini klonla
       uses: actions/checkout@v3
-    - name: Merhaba yaz.
-      run: echo "Merhaba, GitHub Actions!"
+
+    - name: Merhaba yaz
+      run: echo "Merhaba github actions !"
