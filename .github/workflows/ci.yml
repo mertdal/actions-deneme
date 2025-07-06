@@ -1,0 +1,14 @@
+# .github/workflows/ci.yml
+on:
+  push:
+    branches:
+      - main
+jobs: 
+  say-hello:
+  runs-on: ubuntu-latest
+
+  steps:
+    - name: Repo içeriğini klonla
+      uses: actions/checkout@v3
+    - name: Merhaba yaz.
+      run: echo "Merhaba, GitHub Actions!"
